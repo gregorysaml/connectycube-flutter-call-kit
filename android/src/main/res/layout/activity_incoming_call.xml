@@ -7,6 +7,8 @@
     android:background="#0072BC"
     android:orientation="vertical">
 
+    <!-- TODO EDW EINAI TO BACKGROUND COLOR TOU FULL SCREEN INTENT -->
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/avatar_img"
         android:layout_width="160dp"
