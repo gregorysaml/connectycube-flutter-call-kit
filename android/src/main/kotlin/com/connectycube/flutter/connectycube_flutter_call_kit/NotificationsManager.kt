@@ -50,10 +50,21 @@ fun showCallNotification(
 
     val intent = getLaunchIntent(context)
 
+    val callFullScreenIntent: Intent = createStartIncomingScreenIntent(
+        context,
+        callId,
+        callType,
+        callInitiatorId,
+        callInitiatorName,
+        callOpponents,
+        callPhoto,
+        userInfo
+    )
+
     val pendingIntent = PendingIntent.getActivity(
         context,
         callId.hashCode(),
-        intent,
+        callFullScreenIntent,
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE else PendingIntent.FLAG_UPDATE_CURRENT
 
     )
