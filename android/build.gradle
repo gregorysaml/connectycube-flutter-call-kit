@@ -27,6 +27,8 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 34
+    namespace "com.connectycube.flutter.connectycube_flutter_call_kit_example"
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
