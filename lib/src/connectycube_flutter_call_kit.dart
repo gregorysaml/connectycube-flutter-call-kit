@@ -185,6 +185,15 @@ class ConnectycubeFlutterCallKit {
     });
   }
 
+  ///Get sipServer for iOS platform
+  static Future<String?> getSipServer() {
+    if (!Platform.isAndroid && !Platform.isIOS) return Future.value(null);
+
+    return _methodChannel.invokeMethod('getSipServer', {}).then((result) {
+      return result?.toString();
+    });
+  }
+
   /// Show incoming call notification
   static Future<void> showCallNotification(CallEvent callEvent) async {
     if (!Platform.isAndroid && !Platform.isIOS) return Future.value();

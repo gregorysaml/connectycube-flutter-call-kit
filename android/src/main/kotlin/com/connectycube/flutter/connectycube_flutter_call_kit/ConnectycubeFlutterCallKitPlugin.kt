@@ -326,6 +326,18 @@ class ConnectycubeFlutterCallKitPlugin : FlutterPlugin, MethodCallHandler,
                 }
                 result.success(null)
             }
+            // "getSipServer"->{
+            //     try{
+
+            //         val sipServer = arguments["sip_server"] as String?
+
+                   
+            //         result.success(getSipServer(applicationContext, sipServer))
+                    
+            //     }catch (e: Exception){
+            //         result.error("ERROR", e.message, "")
+            //     }
+            // }
 
             else ->
                 result.notImplemented()
